@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logoheader1.png">
+   <!--  <link rel="stylesheet" href="css/style.css"> -->
+    <title>معرض الصور للمنتجات التجميلية</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .gallery-img {    
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            height: 200px; /* توحيد ارتفاع الصور */
+            object-fit: cover; /* لضمان عدم تشوه الصورة */
+            width: 100%;
+            border-radius: 8px;
+        }
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+        /* تحديد حجم الصورة داخل النافذة المنبثقة */
+    #modalImage {
+        max-height: 70vh; /* لا تتعدى الصورة 80% من طول الشاشة */
+        width: auto;      /* الحفاظ على أبعاد الصورة */
+        display: block;
+        margin: 0 auto;
+        border-radius: 5px;
+               }
+    /* تصغير عرض النافذة نفسها */
+    .modal-custom-size {
+        max-width: 500px; /* يمكنكِ تغيير الرقم (500px) حسب الحجم المفضل لديكِ */
+    }
+    </style>
+</head>
+<body class="bg-light">
+   <nav class="navbar navbar-expand-lg navbar-dark bg-secondary sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">معرض الصور</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">الرجوع للرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="gallery-Detergents.html">منتجات تنظيف</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="gallery-food.html">منتجات الغذائية</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="gallery-medicinal.html">منتجات الدوائية</a>
+                </li>
+            </ul>
+        </div>
+        <a class="navbar-brand me-0 ms-lg-3" href="#">
+            <img src="logoheader1.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+        </a>
+    </div>
+</nav>
+<div class="container my-5">
+    <h2 class="text-center mb-4">معرض الصور للمنتجات التجميل</h2>
+    <div class="row g-3">
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic1.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic2.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic3.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic4.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic5.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic6.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic7.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic8.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic9.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic10.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic11.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic12.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic13.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic14.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic15.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic16.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic17.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic18.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        
+
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic20.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+
+        
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic21.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+
+
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic22.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic23.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic24.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic25.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic26.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic27.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic28.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic29.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic30.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <img src="Cosmetic/Cosmetic31.png" class="img-fluid gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this.src)">
+        </div>
+       
+        
+       
+        </div>
+</div>
+
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-custom-size">
+        <div class="modal-content">
+            <div class="modal-header border-0"> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-2 text-center">
+                <img src="" id="modalImage" class="img-fluid" alt="صورة مكبرة">
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    function openModal(src) {
+        document.getElementById('modalImage').src = src;
+    }
+</script>
+
+</body>
+</html>
